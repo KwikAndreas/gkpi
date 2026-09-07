@@ -87,7 +87,7 @@ export default function Home() {
               height={128} 
             />
           </div>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 text-white tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 text-white tracking-tight leading-tight">
               <span className="hero-title-prefix">Selamat Datang di</span> <br />
               <span className="hero-highlight text-[var(--color-primary)] font-black drop-shadow-sm">GKPI KARTINI</span>
           </h1>
@@ -212,7 +212,7 @@ export default function Home() {
           <p className="text-lg text-[var(--color-text-body)] mb-12 max-w-xl mx-auto">
             Ikuti akun sosial media untuk update kegiatan dan inspirasi rohani setiap hari.
           </p>
-          <div className="social-container flex justify-center space-x-6 md:space-x-12 items-center">
+          <div className="social-container flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 items-center">
             <a
               href="#"
               className="social-link-card group flex flex-col items-center"

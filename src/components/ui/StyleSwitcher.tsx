@@ -43,35 +43,38 @@ export function StyleSwitcher() {
 
       <button
         onClick={() => switchStyle("0")}
-        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 ${
+        className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all shrink-0 ${
           currentStyle === "0"
             ? "bg-[var(--color-primary)] text-white shadow-sm"
             : "text-[var(--color-text-body)] hover:bg-[var(--color-primary-light)]"
         }`}
       >
-        0 : Warm Minimalist (Default)
+        <span className="sm:hidden">0: Warm</span>
+        <span className="hidden sm:inline">0 : Warm Minimalist (Default)</span>
       </button>
 
       <button
         onClick={() => switchStyle("1")}
-        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 ${
+        className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all shrink-0 ${
           currentStyle === "1"
             ? "bg-[var(--color-primary)] text-white shadow-sm"
             : "text-[var(--color-text-body)] hover:bg-[var(--color-primary-light)]"
         }`}
       >
-        1 : Elegant Traditional
+        <span className="sm:hidden">1: Traditional</span>
+        <span className="hidden sm:inline">1 : Elegant Traditional</span>
       </button>
 
       <button
         onClick={() => switchStyle("2")}
-        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 ${
+        className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all shrink-0 ${
           currentStyle === "2"
             ? "bg-[var(--color-primary)] text-white shadow-sm"
             : "text-[var(--color-text-body)] hover:bg-[var(--color-primary-light)]"
         }`}
       >
-        2 : Modern Classic
+        <span className="sm:hidden">2: Modern</span>
+        <span className="hidden sm:inline">2 : Modern Classic</span>
       </button>
     </div>
   );

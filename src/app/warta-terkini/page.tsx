@@ -30,8 +30,8 @@ export default async function WartaTerkini() {
   const renungan = await getLatestRenungan();
 
   return (
-    <div className="container py-16">
-      <div className="text-center mb-16">
+    <div className="container py-10 sm:py-16">
+      <div className="text-center mb-12 sm:mb-16">
         <h1 className="font-heading text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--color-text-title)] mb-4">
           Warta Jemaat
         </h1>

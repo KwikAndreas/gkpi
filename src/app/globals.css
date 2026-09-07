@@ -443,6 +443,8 @@
   border: 2px solid #c59b27 !important;
   border-radius: 0.25rem !important;
   box-shadow: 0 8px 24px rgba(68, 64, 60, 0.1) !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 [data-style="1"] .schedule-table thead tr {
@@ -466,7 +468,8 @@
   border: 1px solid #e5e5e0 !important;
   border-radius: 1.25rem !important;
   box-shadow: 0 12px 35px rgba(15, 23, 42, 0.04) !important;
-  overflow: hidden !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 [data-style="2"] .schedule-table thead tr {
@@ -631,6 +634,106 @@
 
 [data-style="2"] .pastor-photo-frame img {
   border-radius: 1rem !important;
+}
+
+/* 10. Mobile Responsiveness Optimizations (Style 1 & Style 2) */
+@media (max-width: 640px) {
+  /* Style 1 Mobile Refinements */
+  [data-style="1"] .theme-divider::before {
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.12em !important;
+  }
+  
+  [data-style="1"] .hero-highlight {
+    letter-spacing: 0.02em !important;
+  }
+
+  [data-style="1"] .gallery-grid {
+    gap: 1.25rem !important;
+  }
+
+  [data-style="1"] .gallery-item {
+    padding: 0.375rem !important;
+    border-width: 2px !important;
+  }
+
+  [data-style="1"] .gallery-caption-box {
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  [data-style="1"] .gallery-caption-title {
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  [data-style="1"] .social-container {
+    gap: 0.75rem !important;
+  }
+
+  [data-style="1"] .social-link-card {
+    padding: 0.625rem 1rem !important;
+  }
+
+  [data-style="1"] .social-label {
+    font-size: 0.75rem !important;
+  }
+
+  [data-style="1"] .schedule-table th,
+  [data-style="1"] .schedule-table td {
+    padding: 0.75rem 0.625rem !important;
+    font-size: 0.8125rem !important;
+  }
+
+  [data-style="1"] .warta-card,
+  [data-style="1"] .renungan-card,
+  [data-style="1"] .profile-history-card,
+  [data-style="1"] .profile-tablet-card {
+    padding: 1.25rem !important;
+  }
+
+  /* Style 2 Mobile Refinements */
+  [data-style="2"] .theme-divider-bar {
+    width: 3rem !important;
+  }
+
+  [data-style="2"] .social-container {
+    gap: 0.625rem !important;
+  }
+
+  [data-style="2"] .social-link-card {
+    padding: 0.5rem 1.125rem !important;
+  }
+
+  [data-style="2"] .social-label {
+    font-size: 0.8125rem !important;
+  }
+
+  [data-style="2"] .gallery-caption-box {
+    padding: 0.75rem !important;
+  }
+
+  [data-style="2"] .gallery-caption-title {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  [data-style="2"] .schedule-table th,
+  [data-style="2"] .schedule-table td {
+    padding: 0.75rem 0.625rem !important;
+    font-size: 0.8125rem !important;
+  }
+
+  [data-style="2"] .warta-card,
+  [data-style="2"] .renungan-card,
+  [data-style="2"] .profile-history-card,
+  [data-style="2"] .profile-tablet-card {
+    padding: 1.25rem !important;
+  }
+
+  [data-style="2"] .warta-quote-text {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+  }
 }
 
 /* Tailwind CSS v4 Theme Token Bridge */

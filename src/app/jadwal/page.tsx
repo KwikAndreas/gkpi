@@ -25,8 +25,11 @@ export default function JadwalKebaktian() {
       </div>
 
       <div className="max-w-5xl mx-auto">
+        <p className="md:hidden text-xs text-[var(--color-text-body)] mb-2 text-right opacity-75">
+          ← Geser tabel ke samping →
+        </p>
         <div className="schedule-table-wrap overflow-x-auto rounded-[var(--radius-card)] shadow-[var(--theme-shadow-card)] border border-[var(--color-border-card)]">
-          <table className="schedule-table w-full text-left border-collapse bg-[var(--color-surface-card)]">
+          <table className="schedule-table w-full min-w-[580px] text-left border-collapse bg-[var(--color-surface-card)]">
             <thead>
               <tr className="bg-[var(--color-primary)] text-white">
                 <th className="p-5 font-bold text-lg whitespace-nowrap">Judul Kebaktian</th>

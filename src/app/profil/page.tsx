@@ -26,7 +26,7 @@ export default function ProfilGereja() {
   ];
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto px-4 py-8 sm:p-8">
       <div className="text-center mb-12">
         <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-title)] tracking-tight">
           Profil GKPI Kartini
