@@ -1,0 +1,94 @@
+{
+  "Data GKI Cinda": {
+    "MetaData": "GKI Cinda",
+    "web": "https://gkicinda.vercel.app",
+    "user": "public",
+    "List Fitur": [
+      {
+        "title": "Beranda",
+        "description": "Halaman utama GKI Cinda",
+        "baru": "perbaikan seperti menghilangkan cantuman logo Youtube pada Footer diharuskan dari Pihak Youtube. lalu saran dari Pak Robert yang menampilkan Logo GKI Cinda diatas Banner Selamat Datang, setelah dicoba hanya akan menampilkan perulangan logo GKI serta akan membuat ratio Foto yang digunakan sebagai Banner 4:3 bukan 16:9"
+      },
+      {
+        "title": "Jadwal",
+        "description": "Jadwal ibadah di GKI Cinda",
+        "baru": "Menampilkan jadwal dalam bentuk tabel"
+      },
+      {
+        "title": "Shalom",
+        "description": "Pengumuman penting untuk jemaat",
+        "baru": "dapat menampilkan Renungan Harian, Bacaan Alkitab Sepekan, dan Pokok Doa Mingguan"
+      },
+      {
+        "title": "Artikel",
+        "description": "Artikel terbaru seputar GKI Cinda",
+        "baru": "dapat Menampilkan artikel terbaru yang dibuat oleh petugas admin, dan ketika dibuka akan menampilkan data lengkap seperti: judul, penulis, tanggal, isi artikel, dan gambar"
+      },
+      {
+        "title": "Info",
+        "description": "Menampilkan informasi penting seputar GKI Cinda",
+        "baru": "Berisi gabungan dari kategori Berita dan Kegiatan. dalam setiap kategori akan menampilkan data lengkap seperti: judul, penulis, tanggal, isi artikel, dan gambar"
+      },
+      {
+        "title": "Download",
+        "description": "Berita terbaru seputar GKI Cinda",
+        "baru": "akan secara otomatis memperbarui Warta Jemaat terbaru setiap minggunya berdasarkan penamaan file. penamaan file yang valid: WARTA JEMAAT 04 JULI 2025 <= Spasi dan Capslock + Tanggal/Bulan/Tahun"
+      }
+    ]
+  },
+  "Data GKI Cinda Admin Dashboard": {
+    "MetaData": "GKI Cinda Dashboard",
+    "web": "https://gkicinda-admin.vercel.app",
+    "user": "Admin",
+    "List Fitur": [
+      {
+        "title": "Google Analytics",
+        "baru": "Tampilan data Statistik Google Analytics masih dalam pengembangan Trial & Error"
+      },
+      {
+        "title": "Shalom",
+        "baru": "Menampilkan jadwal dalam bentuk tabel",
+        "requirement": "Ubah/Edit Ayat, dan Tanggal berlaku saja"
+      },
+      {
+        "title": "Artikel",
+        "baru": "dapat menampilkan Renungan Harian, Bacaan Alkitab Sepekan, dan Pokok Doa Mingguan",
+        "requirement": [
+          {
+            "judul": "max 100 Karakter",
+            "nama penulis": "max 50 Karakter",
+            "ringkasan": "max 300 Karakter",
+            "isi-artikel": "max 5000 Karakter",
+            "gambar": "max 5MB dengan format: WEBP/PNG"
+          }
+        ]
+      },
+      {
+        "title": "Informasi",
+        "description": "Artikel terbaru seputar GKI Cinda",
+        "baru": "dapat Menampilkan artikel terbaru yang dibuat oleh petugas admin, dan ketika dibuka akan menampilkan data lengkap seperti: judul, penulis, tanggal, isi artikel, dan gambar",
+        "requirement": [
+          {
+            "kategori": "Berita",
+            "judul": "max 100 Karakter",
+            "deskripsi": "max 500 Karakter",
+            "tanggal": "dd/mm/yyyy",
+            "gambar": "max 5MB dengan format: WEBP/PNG"
+          },
+          {
+            "kategori": "Kegiatan",
+            "judul": "max 100 Karakter",
+            "deskripsi": "max 500 Karakter",
+            "jadwal": "dd/mm/yyyy",
+            "gambar": "max 5MB dengan format: WEBP/PNG"
+          }
+        ]
+      },
+      {
+        "title": "Download",
+        "baru": "Berisi gabungan dari kategori Berita dan Kegiatan. dalam setiap kategori akan menampilkan data lengkap seperti: judul, penulis, tanggal, isi artikel, dan gambar",
+        "requirement": "pdf file only, max 5MB"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+/* overrides for react-calendar */
+@import 'react-calendar/dist/Calendar.css';
+
+.react-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1f2937;
+  border-radius: 8px;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+}
+
+.react-calendar__month-view__weekdays {
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+.react-calendar__tile {
+  padding: 1.2rem 0.5rem !important;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  color: #1f2937;
+  position: relative;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+  border-radius: 12px !important;
+}
+
+.react-calendar__tile--now {
+  background: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-radius: 12px !important;
+}
+
+.react-calendar__tile--active {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px 0 var(--color-primary-light);
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: var(--color-primary-hover) !important;
+}
+
+/* Remove default focus outline */
+.react-calendar__tile:focus {
+  outline: none;
+}
