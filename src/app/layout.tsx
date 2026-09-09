@@ -51,7 +51,7 @@ export default function RootLayout({
         </main>
         <Footer />
         {/* StyleSwitcher hanya aktif di mode development (npm run dev) */}
-        {process.env.NODE_ENV === "development" && <StyleSwitcher />}
+        {/* {process.env.NODE_ENV === "development" && <StyleSwitcher />} */}
       </body>
     </html>
   );

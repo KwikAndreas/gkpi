@@ -485,6 +485,50 @@
   color: #f8fafc !important;
 }
 
+/* Style 1 Mobile Schedule Cards */
+[data-style="1"] .schedule-mobile-card {
+  border: 2px solid #c59b27 !important;
+  border-top: 5px solid #7f1d1d !important;
+  background-color: #fffefb !important;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 6px 20px rgba(68, 64, 60, 0.1) !important;
+}
+
+[data-style="1"] .schedule-mobile-card .card-index-traditional {
+  display: inline-block !important;
+  color: #c59b27 !important;
+  font-family: var(--font-playfair), serif !important;
+}
+
+[data-style="1"] .schedule-mobile-icon-box {
+  background-color: #7f1d1d !important;
+  color: #f6d88c !important;
+  border: 1px solid #c59b27 !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Style 2 Mobile Schedule Cards */
+[data-style="2"] .schedule-mobile-card {
+  border: 1px solid #e5e5e0 !important;
+  border-top: 1px solid #e5e5e0 !important;
+  border-radius: 1.25rem !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-style="2"] .schedule-mobile-card .card-index-modern {
+  display: inline-block !important;
+  color: #94a3b8 !important;
+  font-family: var(--font-jakarta), sans-serif !important;
+}
+
+[data-style="2"] .schedule-mobile-icon-box {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
 /* 8. Warta & Renungan Transformations (/warta-terkini) */
 /* Style 1: Cathedral Liturgical Folio */
 [data-style="1"] .warta-card,
@@ -596,6 +640,45 @@
   display: none !important;
 }
 
+[data-style="1"] .history-milestone-card {
+  border: 2px solid #c59b27 !important;
+  border-top: 5px solid #7f1d1d !important;
+  background-color: #fffefb !important;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 4px 16px rgba(68, 64, 60, 0.08) !important;
+}
+
+[data-style="1"] .history-milestone-badge {
+  background-color: #7f1d1d !important;
+  color: #fef3c7 !important;
+  border: 1px solid #c59b27 !important;
+  border-radius: 0.25rem !important;
+  font-family: var(--font-playfair), serif !important;
+  font-weight: 700 !important;
+}
+
+[data-style="1"] .history-milestone-icon {
+  background-color: #7f1d1d !important;
+  color: #f6d88c !important;
+  border: 1px solid #c59b27 !important;
+  border-radius: 0.25rem !important;
+}
+
+[data-style="1"] .pastor-avatar-box {
+  background-color: #7f1d1d !important;
+  color: #fef3c7 !important;
+  border: 2px solid #c59b27 !important;
+  border-radius: 0.25rem !important;
+}
+
+[data-style="1"] .profile-role-badge {
+  background-color: #7f1d1d !important;
+  color: #fef3c7 !important;
+  border: 1px solid #c59b27 !important;
+  border-radius: 0.25rem !important;
+  font-family: var(--font-playfair), serif !important;
+}
+
 /* Style 2: Modern Editorial Luxury Bento Profil */
 [data-style="2"] .profile-history-card {
   border: 1px solid #e5e5e0 !important;
@@ -634,6 +717,44 @@
 
 [data-style="2"] .pastor-photo-frame img {
   border-radius: 1rem !important;
+}
+
+[data-style="2"] .history-milestone-card {
+  border: 1px solid #e5e5e0 !important;
+  border-radius: 1.25rem !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-style="2"] .history-milestone-badge {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-jakarta), sans-serif !important;
+  font-weight: 700 !important;
+}
+
+[data-style="2"] .history-milestone-icon {
+  background-color: #f8fafc !important;
+  color: #b91c1c !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.75rem !important;
+}
+
+[data-style="2"] .pastor-avatar-box {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 1rem !important;
+}
+
+[data-style="2"] .profile-role-badge {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-jakarta), sans-serif !important;
 }
 
 /* 10. Mobile Responsiveness Optimizations (Style 1 & Style 2) */
@@ -734,6 +855,194 @@
     font-size: 1.05rem !important;
     line-height: 1.6 !important;
   }
+}
+
+/* 11. Footer Customizations (Style 1 & Style 2) */
+/* --- STYLE 1: ELEGANT TRADITIONAL (SACRED CATHEDRAL HERITAGE - MULTI-GENERATIONAL ACCESSIBLE) --- */
+[data-style="1"] footer {
+  background-color: #f2ece1 !important; /* Grounded Warm Antique Parchment - Easy on Boomers' & Millennials' eyes */
+  border-top: 5px solid #7f1d1d !important; /* Cathedral Burgundy Stately Top Border */
+  box-shadow: inset 0 2px 0 #c59b27, 0 -6px 20px rgba(68, 64, 60, 0.08) !important; /* Antique Gold Hairline Accent */
+}
+
+[data-style="1"] .footer-brand-title {
+  font-family: var(--font-playfair), serif !important;
+  color: #7f1d1d !important; /* Deep Cathedral Burgundy - High Contrast (>10:1) */
+  letter-spacing: 0.04em !important;
+  font-weight: 800 !important;
+}
+
+[data-style="1"] .footer-section-title {
+  font-family: var(--font-playfair), serif !important;
+  color: #7f1d1d !important; /* Deep Cathedral Burgundy */
+  letter-spacing: 0.04em !important;
+  font-weight: 700 !important;
+}
+
+[data-style="1"] .footer-desc-text,
+[data-style="1"] .footer-contact-list,
+[data-style="1"] .footer-contact-text {
+  color: #38322e !important; /* Deep Walnut / Stone Ink - WCAG AAA Contrast (>11:1) */
+  font-size: 0.9375rem !important;
+  line-height: 1.65 !important;
+}
+
+[data-style="1"] .footer-icon-box {
+  background-color: #7f1d1d !important; /* Deep Cathedral Burgundy */
+  color: #fef3c7 !important; /* Antique Ivory Icon */
+  border: 1px solid #c59b27 !important; /* Antique Gold Border */
+  border-radius: 0.25rem !important;
+  box-shadow: 0 2px 5px rgba(127, 29, 29, 0.2) !important;
+}
+
+[data-style="1"] .footer-phone-link {
+  color: #7f1d1d !important;
+  font-family: var(--font-playfair), serif !important;
+  font-weight: 700 !important;
+  font-size: 1.0625rem !important; /* Large and clear for senior tap targets */
+  letter-spacing: 0.02em !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-style="1"] .footer-phone-link:hover {
+  color: #c59b27 !important;
+}
+
+@media (max-width: 767px) {
+  [data-style="1"] .footer-contact-item {
+    background-color: #fffefb !important; /* Pure Warm Ivory Card */
+    border: 1.5px solid #c59b27 !important; /* Stately Gold Frame */
+    border-radius: 0.25rem !important;
+    box-shadow: 0 4px 12px rgba(68, 64, 60, 0.07) !important;
+  }
+}
+
+[data-style="1"] .footer-social-btn {
+  background-color: #fffefb !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #7f1d1d !important;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 2px 6px rgba(68, 64, 60, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-style="1"] .footer-social-btn:hover {
+  background-color: #7f1d1d !important;
+  color: #fef3c7 !important;
+  border-color: #7f1d1d !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 14px rgba(127, 29, 29, 0.25) !important;
+}
+
+[data-style="1"] .footer-bottom-bar {
+  background-color: #e5decb !important; /* Grounded parchment separator */
+  border-top: 1px solid #d4cbb8 !important;
+}
+
+[data-style="1"] .footer-copyright {
+  color: #57534e !important;
+  font-size: 0.875rem !important;
+}
+
+[data-style="1"] .footer-legal-link {
+  color: #44403c !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+[data-style="1"] .footer-legal-link:hover {
+  color: #7f1d1d !important;
+  text-decoration: underline !important;
+}
+
+[data-style="1"] .footer-legal-dot {
+  color: #c59b27 !important;
+}
+
+/* --- STYLE 2: MODERN CLASSIC (EDITORIAL LUXURY) --- */
+[data-style="2"] footer {
+  background: linear-gradient(180deg, #0f172a 0%, #080c14 100%) !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+[data-style="2"] .footer-brand-title {
+  font-family: var(--font-jakarta), sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #f8fafc !important;
+}
+
+[data-style="2"] .footer-section-title {
+  font-family: var(--font-jakarta), sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  font-size: 0.8125rem !important;
+  color: #94a3b8 !important;
+}
+
+[data-style="2"] .footer-desc-text,
+[data-style="2"] .footer-contact-list,
+[data-style="2"] .footer-contact-text {
+  color: #94a3b8 !important;
+}
+
+[data-style="2"] .footer-icon-box {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #f87171 !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-style="2"] .footer-phone-link {
+  color: #f1f5f9 !important;
+  transition: color 0.2s ease !important;
+}
+
+[data-style="2"] .footer-phone-link:hover {
+  color: #f87171 !important;
+}
+
+@media (max-width: 767px) {
+  [data-style="2"] .footer-contact-item {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 1rem !important;
+  }
+}
+
+[data-style="2"] .footer-social-btn {
+  border-radius: 0.75rem !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-style="2"] .footer-social-btn:hover {
+  border-color: #b91c1c !important;
+  color: #f87171 !important;
+  transform: translateY(-2px);
+}
+
+[data-style="2"] .footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background-color: #05070c !important;
+}
+
+[data-style="2"] .footer-copyright,
+[data-style="2"] .footer-legal-link {
+  color: #64748b !important;
+}
+
+[data-style="2"] .footer-legal-link:hover {
+  color: #94a3b8 !important;
+}
+
+[data-style="2"] .footer-legal-dot {
+  color: #334155 !important;
 }
 
 /* Tailwind CSS v4 Theme Token Bridge */

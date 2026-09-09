@@ -89,10 +89,10 @@ export default function Home() {
           </div>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 text-white tracking-tight leading-tight">
               <span className="hero-title-prefix">Selamat Datang di</span> <br />
-              <span className="hero-highlight text-[var(--color-primary)] font-black drop-shadow-sm">GKPI KARTINI</span>
+              <span className="hero-highlight text-[var(--color-primary)] font-black drop-shadow-sm">GKPI JEMAAT KARTINI</span>
           </h1>
-          <p className="text-lg md:text-2xl mb-10 text-gray-200 font-medium max-w-2xl mx-auto leading-relaxed">
-              Mewartakan kasih Kristus, melayani dengan sepenuh hati, dan membangun jemaat yang berakar di dalam Firman-Nya.
+          <p className="text-lg md:text-2xl mb-10 text-gray-200 font-medium max-w-3xl mx-auto leading-relaxed">
+              Gereja Yang Berbuah Dalam Perubahan Zaman (Yohanes 15:1-8)
           </p>
           <Link
               href="/profil"
