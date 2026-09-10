@@ -1,42 +1,25 @@
+import React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Card } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { FileText, Download, BookOpen } from "lucide-react";
+import { FileText, Download, BookOpen, Calendar, ArrowRight, Sparkles } from "lucide-react";
+import { latestWarta, latestRenungan } from "@/data/wartaData";
 
-// Placeholder data fetching function (mocking Supabase query)
-async function getLatestWarta() {
-  // In the future, this will be: supabase.from('warta').select('*').eq('is_active', true).order('published_at', { ascending: false }).limit(1).single()
-  return {
-    id: "uuid-1",
-    title: "Warta Jemaat - Minggu, 7 September 2026",
-    content: "Puji syukur kepada Tuhan, pada minggu ini kita merayakan...",
-    pdf_url: "#",
-    published_at: new Date().toISOString(),
-  };
-}
+export const metadata: Metadata = {
+  title: "Warta Jemaat & Renungan - GKPI Kartini",
+  description: "Warta mingguan terkini dan renungan firman Tuhan jemaat GKPI Kartini Jakarta Pusat.",
+};
 
-async function getLatestRenungan() {
-  // In the future, this will be: supabase.from('renungan').select('*').eq('is_active', true).order('published_at', { ascending: false }).limit(1).single()
-  return {
-    id: "uuid-2",
-    title: "Renungan Harian: Mengandalkan Tuhan",
-    author: "Pdt. J. Simanjuntak",
-    content: "Dalam kehidupan kita sehari-hari, seringkali kita dihadapkan pada tantangan yang terlihat mustahil untuk diatasi. Namun, firman Tuhan dalam Amsal 3:5-6 mengingatkan kita untuk 'Percayalah kepada TUHAN dengan segenap hatimu, dan janganlah bersandar kepada pengertianmu sendiri.'",
-    published_at: new Date().toISOString(),
-  };
-}
-
-export default async function WartaTerkini() {
-  const warta = await getLatestWarta();
-  const renungan = await getLatestRenungan();
-
+export default function WartaTerkini() {
   return (
-    <div className="container py-10 sm:py-16">
+    <div className="container py-10 sm:py-16 px-4">
+      {/* Header Halaman */}
       <div className="text-center mb-12 sm:mb-16">
         <h1 className="font-heading text-4xl md:text-5xl font-extrabold tracking-tight text-[var(--color-text-title)] mb-4">
-          Warta Jemaat
+          Warta Jemaat & Renungan
         </h1>
-        <p className="text-lg md:text-2xl text-[var(--color-text-body)] max-w-2xl mx-auto leading-relaxed">
-          Informasi terkini dan siraman rohani untuk jemaat GKPI.
+        <p className="text-base sm:text-lg md:text-2xl text-[var(--color-text-body)] max-w-2xl mx-auto leading-relaxed">
+          Informasi pelayanan, warta mingguan, dan siraman firman Tuhan bagi jemaat GKPI Kartini.
         </p>
         <div className="theme-divider mt-6">
           <div className="theme-divider-bar"></div>
@@ -44,66 +27,108 @@ export default async function WartaTerkini() {
       </div>
 
       <div className="warta-grid grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {/* Warta Section */}
-        <Card className="warta-card flex flex-col h-full border-t-[6px] border-t-[var(--color-primary)] border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+        {/* 1. Kartu Warta Jemaat */}
+        <Card className="warta-card flex flex-col h-full border-t-[6px] border-t-[var(--color-primary)] border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 p-6 sm:p-8">
           <div className="flex items-center gap-4 mb-6">
-            <div className="warta-card-header-icon w-14 h-14 rounded-full bg-[var(--color-primary-light)] flex items-center justify-center text-[var(--color-primary)]">
+            <div className="warta-card-header-icon w-14 h-14 rounded-full bg-[var(--color-primary-light)] flex items-center justify-center text-[var(--color-primary)] shrink-0">
               <FileText size={24} />
             </div>
             <div>
-              <h2 className="text-2xl font-bold font-heading text-[var(--color-text-title)]">Warta Jemaat</h2>
-              <p className="text-sm text-gray-500">
-                Terbaru: {new Date(warta.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+              <div className="flex items-center gap-2">
+                <h2 className="text-2xl font-bold font-heading text-[var(--color-text-title)]">
+                  Warta Jemaat
+                </h2>
+                <span className="px-2 py-0.5 rounded-full text-[11px] font-bold uppercase bg-red-50 text-[var(--color-primary)] border border-red-100">
+                  {latestWarta.edition}
+                </span>
+              </div>
+              <p className="text-sm text-gray-500 flex items-center gap-1.5 mt-0.5">
+                <Calendar size={13} />
+                <span>{latestWarta.date}</span>
               </p>
             </div>
           </div>
-          
-          <div className="flex-1">
-            <h3 className="font-heading font-bold text-xl mb-4 text-[var(--color-text-title)]">{warta.title}</h3>
-            <p className="text-[var(--color-text-body)] mb-6 line-clamp-3 leading-relaxed">
-              {warta.content}
+
+          <div className="flex-1 space-y-3">
+            <div>
+              <h3 className="font-heading font-bold text-xl text-[var(--color-text-title)] leading-snug">
+                {latestWarta.theme}
+              </h3>
+              <p className="text-xs font-semibold text-[var(--color-primary)] mt-1">
+                {latestWarta.scripture} &bull; Khotbah: {latestWarta.speakerKU1_2}
+              </p>
+            </div>
+
+            <p className="text-[var(--color-text-body)] text-sm sm:text-base leading-relaxed line-clamp-3">
+              {latestWarta.summary}
             </p>
           </div>
-          
-          <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4 mt-auto">
-            <Button variant="primary" className="flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all">
+
+          <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-3 mt-6">
+            <a
+              href={latestWarta.pdfUrl}
+              download="Warta-Jemaat-GKPI-6-September-2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] font-bold text-sm transition-all shadow-sm active:scale-95 flex-1"
+            >
               <Download size={18} />
-              Unduh PDF
-            </Button>
-            <Button variant="outline" className="flex items-center justify-center gap-2 flex-1 hover:bg-gray-50 transition-all">
+              <span>Unduh PDF</span>
+            </a>
+
+            <Link
+              href="/warta-terkini/baca"
+              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl border-2 border-[var(--color-primary)]/20 hover:border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary-light)] font-bold text-sm transition-all flex-1"
+            >
               <FileText size={18} />
-              Baca Online
-            </Button>
+              <span>Baca Online</span>
+            </Link>
           </div>
         </Card>
 
-        {/* Renungan Section */}
-        <Card className="renungan-card flex flex-col h-full border-t-[6px] border-t-gray-800 border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300">
+        {/* 2. Kartu Renungan */}
+        <Card className="renungan-card flex flex-col h-full border-t-[6px] border-t-gray-800 border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 p-6 sm:p-8">
           <div className="flex items-center gap-4 mb-6">
-            <div className="renungan-card-header-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center text-gray-800">
+            <div className="renungan-card-header-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 shrink-0">
               <BookOpen size={24} />
             </div>
             <div>
-              <h2 className="text-2xl font-bold font-heading text-[var(--color-text-title)]">Renungan</h2>
-              <p className="text-sm text-gray-500">
-                Terbaru: {new Date(renungan.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+              <div className="flex items-center gap-2">
+                <h2 className="text-2xl font-bold font-heading text-[var(--color-text-title)]">
+                  Renungan Mingguan
+                </h2>
+                <span className="px-2 py-0.5 rounded-full text-[11px] font-bold uppercase bg-amber-50 text-amber-700 border border-amber-200">
+                  {latestRenungan.scriptureRef}
+                </span>
+              </div>
+              <p className="text-sm text-gray-500 flex items-center gap-1.5 mt-0.5">
+                <Calendar size={13} />
+                <span>{latestRenungan.dateFormatted}</span>
               </p>
             </div>
           </div>
-          
-          <div className="flex-1">
-            <h3 className="font-heading font-bold text-xl mb-1 text-[var(--color-text-title)]">{renungan.title}</h3>
-            <p className="text-sm text-[var(--color-primary)] font-medium mb-4">Oleh: {renungan.author}</p>
-            <p className="warta-quote-text text-[var(--color-text-body)] mb-6 italic leading-relaxed">
-              &quot;{renungan.content}&quot;
+
+          <div className="flex-1 space-y-2">
+            <h3 className="font-heading font-bold text-xl text-[var(--color-text-title)] leading-snug">
+              {latestRenungan.title}
+            </h3>
+            <p className="text-xs font-semibold text-[var(--color-primary)]">
+              Oleh: {latestRenungan.author} ({latestRenungan.authorRole})
+            </p>
+            <p className="warta-quote-text text-[var(--color-text-body)] italic text-sm sm:text-base leading-relaxed line-clamp-3 pt-1">
+              &quot;{latestRenungan.scriptureText}&quot;
             </p>
           </div>
-          
-          <div className="pt-6 border-t border-gray-100 mt-auto">
-            <Button variant="secondary" className="w-full flex items-center justify-center gap-2 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+
+          <div className="pt-6 border-t border-gray-100 mt-6">
+            <Link
+              href="/warta-terkini/renungan"
+              className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gray-900 hover:bg-black text-white font-bold text-sm transition-all shadow-sm active:scale-95"
+            >
               <BookOpen size={18} />
-              Baca Selengkapnya
-            </Button>
+              <span>Baca Selengkapnya</span>
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </Card>
       </div>
