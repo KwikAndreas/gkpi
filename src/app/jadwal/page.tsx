@@ -86,10 +86,16 @@ const schedules: ScheduleItem[] = [
     subtitle: "Ibadah & Fellowship Pemuda Dewasa Muda",
     sessions: [
       {
-        day: "Sabtu III",
+        day: "Sabtu II",
         time: "17.00 WIB",
         format: "Onsite",
         frequencyDesc: "Sabtu Minggu Ke-3 Setiap Bulan",
+      },
+      {
+        day: "Minggu IV",
+        time: "11.30 WIB",
+        format: "Onsite",
+        frequencyDesc: "Minggu Minggu Ke-4 Setiap Bulan",
       },
     ],
   },

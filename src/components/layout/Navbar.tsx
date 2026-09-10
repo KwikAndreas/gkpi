@@ -41,7 +41,7 @@ export function Navbar() {
             alt="Logo GKPI"
             width={45}
             height={40}
-            className="mr-3 transition-transform duration-300 group-hover:scale-105"
+            className="w-[45px] h-auto mr-3 transition-transform duration-300 group-hover:scale-105"
           />
           <span className="text-[var(--color-text-title)] font-bold text-xl hidden sm:inline tracking-tight">
             GKPI KARTINI

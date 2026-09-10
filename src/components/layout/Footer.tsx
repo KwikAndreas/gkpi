@@ -17,7 +17,7 @@ export function Footer() {
                 alt="Logo GKPI" 
                 width={40} 
                 height={40} 
-                className="transition-transform duration-300 group-hover:scale-105"
+                className="w-10 h-auto transition-transform duration-300 group-hover:scale-105"
               />
               <span className="font-heading font-bold text-2xl tracking-tight text-white footer-brand-title">
                 GKPI KARTINI

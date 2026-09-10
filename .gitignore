@@ -40,7 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# data internal
-data/
-code_ref/
-supabase/
+# data internal (root level only)
+/data/
+/code_ref/
+/supabase/
